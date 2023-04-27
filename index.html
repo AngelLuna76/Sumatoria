@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora de Promedio</title>
+</head>
+<center>
+<body>
+	<h2>Calculadora de Promedio</h2>
+	<form>
+		<label for="nota1">Calificacion 1:</label>
+		<input type="number" id="nota1" name="nota1"><br><br>
+		<label for="nota2">Calificacion 2:</label>
+		<input type="number" id="nota2" name="nota2"><br><br>
+		<button type="button" onclick="calcularPromedio()">Calcular Promedio</button>
+	</form>
+	<script>
+		function calcularPromedio() {
+			var nota1 = parseFloat(document.getElementById("nota1").value);
+			var nota2 = parseFloat(document.getElementById("nota2").value);
+			var promedio = (nota1 + nota2) / 2;
+			if (promedio >= 5.99) {
+				alert("Aprobaste con: " + promedio.toFixed(2) + "!");
+			} else {
+				alert("Reprobaste con: " + promedio.toFixed(2) + ".");
+			}
+		}
+	</script>
+</body>
+</center>
+</html>
